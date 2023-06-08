@@ -1,0 +1,577 @@
+* {
+    margin:0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+
+}
+.header{
+    min-height: 120vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/insolvent-crop.png);
+    background-position:center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;    
+}
+
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li ::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: orange;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li :hover::after{
+    width: 100%;
+}
+
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: white;
+}
+
+span{
+    color: orange;
+}
+
+ @media only screen and (max-width : 1024px){ }
+
+/*----------- Home/Intro ---------*/
+.index-intro{
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.index-intro h1{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.index-intro-col h1{
+    font-size: 20px;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 50px;
+    
+    
+}
+.index-intro-col p{
+    font-size: 16px;
+    padding-top: 10px;
+    line-height: 1.8;
+    
+}
+
+
+/*----------- Home/Principle Cards ---------*/
+
+.principles-background{
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    padding-top: 30px;
+    background: #6D6027;
+    background: -webkit-linear-gradient(left, #D3CBB8, #6D6027);
+    background: -o-linear-gradient(left, #D3CBB8, #6D6027);
+    background: linear-gradient(to right, #D3CBB8, #6D6027);
+}
+
+.prin-heading h1{
+    font-size: 50px;
+}   
+.prin-heading p{
+    font-size: 18px;
+}
+
+.row2{
+    display: block;
+    align-items: center;
+    display: flex;
+    height: 60vh;
+    justify-content: center;
+    font-family: sans-serif;
+    justify-content: space-between;
+    color: black;
+    margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  cursor: pointer;
+  height: 200px;
+  margin: 20px;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+  transition: height 1000ms;
+  width:500px;
+}
+
+.card.expanded {
+  height: 500px;
+}
+
+.label{
+    margin-top: 30px;
+  transform: translateY(10px);
+  transition: transform 1000ms;
+}
+
+.text1 {
+  clip-path: polygon(0% 100%, 0 0%, 50% -5%, 0% 0%, 0% 0%);
+  transition: clip-path 1000ms;
+
+}
+.card.expanded .text1 {
+  clip-path: polygon(0% 100%, 0 -100%, 50% -15%, 100% -100%, 100% 100%);
+}
+
+
+.text-content {
+  transform: translateY(-160px);
+  transition: transform 1000ms;
+    font-weight: 300;
+}
+.card.expanded .text-content {
+  transform: translateY(-15px);
+}
+.chevron {
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 15px);
+  transform-origin: 50%;
+  transform: rotate(180deg);
+  transition: transform 1000ms;
+}
+.card.expanded .chevron {
+  transform: rotate(0deg);
+}
+.title {
+  font-weight: 600;
+  margin: px 0 12px;
+    font-size: 20px;
+}
+.body-text {
+  padding: 0px 20px;
+  margin: 90px 0 12px;
+
+}
+
+/*----------- Intro Page ---------*/
+
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+.sub-header h1{
+    margin-top: 100px;
+    
+}
+
+.intro{
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.intro h1{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+
+.intro-col{
+    flex-basis: 48%;
+    padding: 0px 2px;     
+}
+
+.intro-col h1{
+    font-size: 30px;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 50px;
+    
+}
+
+.intro-col p{
+    font-size: 16px;
+    padding-top: 30px;
+    line-height: 1.8;
+    
+}
+
+.intro-img{
+    width: 80%;
+    max-width: 450px;
+    position: relative;
+}
+
+.back-img{
+    position: absolute;
+    width: 80%;
+    max-width: 450px;
+    top: -12px;
+    right: 15px;
+}
+
+/*----------- Insolvent Page ---------*/
+
+.insol-sub-header{
+    height: 50vh;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: black; 
+}
+
+.insol-sub-header h1{
+    margin-top: 60px;
+    
+}
+
+.insolvent{
+    width: 80%;
+    margin: auto;
+    padding-bottom: 50px;
+    color: black;
+    
+}
+
+.insolvent-col{
+    flex-basis: 48%;
+    padding: 5px 2px; 
+    color: black;
+}
+
+.insolvent-col img{
+    width: 80%;
+    background-position: right;
+    padding-top: 20px;
+}
+
+.insolvent-col h3{
+    padding-top: 0;
+}
+
+.insolvent-col p{
+    font-size: 15px;
+    padding: 15px 0 25px;
+}
+
+
+.book-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 1px solid orange;
+    padding: 12px 34px;
+    font: 13px;
+    background: transparent; 
+    cursor: pointer;
+    margin-left: 17%;
+    
+}
+
+.book-btn:hover{
+    border: 1px solid orange;
+    background: orange;
+    transition: 1s;
+    
+}
+/*-----------Glossary----------*/
+
+.glos-sub-header{
+    height: 50vh;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+.glos-sub-header h1{
+    margin-top: 60px;
+}
+
+.glos{
+    width: 80%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.glos-col{
+    flex-basis: 48%;
+    padding: 10px 2px;     
+}
+
+
+
+/*-----------Dictionary----------*/
+.dict-sub-header{
+    height: 50vh;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+.dict-sub-header h1{
+    margin-top: 60px;
+}
+
+.dict{
+    width: 80%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.dict-col{
+    flex-basis: 48%;
+    padding: 10px 2px;     
+}
+
+
+/*-----------Media----------*/
+.media-sub-header{
+    height: 50vh;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+.media-sub-header h1{
+    margin-top: 60px;
+}
+
+.media{
+    width: 80%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.media-col{
+    flex-basis: 48%;
+    padding: 10px 2px;     
+}
+
+
+/*-----------JSD Lab----------*/
+
+.lab-sub-header{
+    height: 50vh;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+.lab-sub-header h1{
+    margin-top: 60px;
+}
+
+.lab{
+    width: 80%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.lab-col{
+    flex-basis: 48%;
+    padding: 10px 2px;     
+}
+
+/*------ vision/lab -----*/
+
+.vision{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    color: black;
+    padding-top: 30px;
+    
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.vision-col{
+    flex-basis: 31%;
+    background: #147763;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.vision-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,1.0);
+}
+
+
+
+/*-----------Contact Us----------*/
+
+.contact-sub-header{
+    height: 50vh;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+.contact-sub-header h1{
+    margin-top: 60px;
+}
+
+.contact{
+    width: 80%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.contact-col{
+    flex-basis: 48%;
+    padding: 10px 2px;     
+}
+
+
+
+/*-----------Loading Dots----------*/
+
+.loader-container{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.dots-container .dot{
+    height: 10px;
+    width: 10px;
+    background: orange;
+    border-radius: 50%;
+    animation: bounce 300ms infinite ease-in-out alternate;
+}
+
+.dots-container .dot:nth-child(2){
+    animation-delay: 100ms;
+}
+
+.dots-container .dot:nth-child(3){
+    animation-delay: 200ms;
+}
+
+@keyframes bounce{
+    to{
+        transform: translateY(12px);
+    }
+}
+
+.dots-container{
+    display: flex;
+    grid-gap: 4px;
+    
+}
+
+
+/*-----------Footer----------*/
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+
+}
+
+.footer h4{
+    margin-bottom: 15px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+
+
+
+
+
