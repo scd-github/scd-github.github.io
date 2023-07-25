@@ -6,3 +6,4 @@ const cardsGlide = new Glide('.my-slider', {
     startAt: '1',
     gap: 18,
 }).mount();
+
